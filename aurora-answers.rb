@@ -49,10 +49,10 @@ def switchPairs(list)
   return result
 end
 
-testing1 = ["four", "score", "and", "seven", "years", "ago"]
-testing2 = ["to", "be", "or", "not", "to", "be", "hamlet"]
+# testing1 = ["four", "score", "and", "seven", "years", "ago"]
+# testing2 = ["to", "be", "or", "not", "to", "be", "hamlet"]
 
-puts "first"
-puts switchPairs(testing1)
-puts "second"
-puts switchPairs(testing2)
+# puts "first"
+# puts switchPairs(testing1)
+# puts "second"
+# puts switchPairs(testing2)
