@@ -26,3 +26,33 @@ end
 
 
 # problem 2
+
+
+def switchPairs(list)
+
+  result = []
+
+  i = 0
+  how_many_times = list.length/2
+  how_many_times.times do
+    first = list[i]
+    second = list[i+1]
+    result << second
+    result << first
+    i += 2
+  end
+
+  if list.length % 2 == 1
+    result << list[-1]
+  end
+
+  return result
+end
+
+testing1 = ["four", "score", "and", "seven", "years", "ago"]
+testing2 = ["to", "be", "or", "not", "to", "be", "hamlet"]
+
+puts "first"
+puts switchPairs(testing1)
+puts "second"
+puts switchPairs(testing2)
