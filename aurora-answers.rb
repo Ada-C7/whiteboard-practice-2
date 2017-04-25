@@ -6,16 +6,13 @@ def mirror(list)
   # doubles size of orig array
   # appends mirror image of original array on orig
 
-  result = []
+  result = Array.new(list.length*2)
 
+  n = -1
   list.length.times do |i|
-    result << list[i]
-  end
-
-  rev = -1
-  list.length.times do
-    result << list[rev]
-    rev -= 1
+    result[i] = list[i]
+    result[n] = list[i]
+    n -= 1
   end
 
   return result
@@ -30,28 +27,19 @@ end
 
 def switchPairs(list)
 
-  result = []
-
   i = 0
   how_many_times = list.length/2
   how_many_times.times do
-    first = list[i]
-    second = list[i+1]
-    result << second
-    result << first
+    list[i], list[i+1] = list[i+1], list[i]
     i += 2
   end
 
-  if list.length % 2 == 1
-    result << list[-1]
-  end
-
-  return result
+  return list
 end
 
 # testing1 = ["four", "score", "and", "seven", "years", "ago"]
 # testing2 = ["to", "be", "or", "not", "to", "be", "hamlet"]
-
+#
 # puts "first"
 # puts switchPairs(testing1)
 # puts "second"
