@@ -18,7 +18,27 @@ then it should return the following values after the call:
 [1, 3, 2, 7, 7, 2, 3, 1]
 Notice that it has been doubled in size by having the original sequence appearing in reverse order at the end of the list. You may not make assumptions about how many elements are in the list.
 
+def mirror(list)
+    arr1 = list
+    arr2 = list.reverse!
+  return arr1 + arr2
+end
+
+print mirror(list)
+
 ## Problem #2
 Write a method `switchPairs` that switches the order of values in an Array of strings in a pairwise fashion. Your method should switch the order of the first two values, then switch the order of the next two, switch the order of the next two, and so on. **This switch should happen _in place_, meaning no new array should be created.** For example, if the list initially stores these values: ["four", "score", "and", "seven", "years", "ago"] your method should switch the first pair, "four", "score", the second pair, "and", "seven", and the third pair, "years", "ago", to yield this list: ["score", "four", "seven", "and", "ago", "years"]
 
 If there are an odd number of values in the list, the final element is not moved. For example, if the original list had been: ["to", "be", "or", "not", "to", "be", "hamlet"] It would again switch pairs of values, but the final value, "hamlet" would not be moved, yielding this list: ["be", "to", "not", "or", "be", "to", "hamlet"]
+
+def switchPairs(arr)
+   num = arr.length / 2
+   i = 1
+   num.times do
+     num_1 = arr[i]
+     arr[i] = arr[i-1]
+     arr[i-1] = num_1
+     i = 2
+   end
+   return arr
+ end
