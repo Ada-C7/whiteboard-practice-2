@@ -22,16 +22,20 @@ Notice that it has been doubled in size by having the original sequence appearin
 ### Answer #1
 
 def mirror(list)
-  l = list.length - 1
+  n = list.length - 1
   m = list.length
+  arry = []
+
+  list.each do |l|
+    arry << l
+  end
 
   m.times do
-    list << list[l]
-    l -= 1
+    arry << list[n]
+    n -= 1
   end
-  return list
+  return arry
 end
-
 
 
 ## Problem #2
