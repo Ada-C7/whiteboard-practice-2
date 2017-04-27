@@ -12,14 +12,13 @@
 
 def mirror(list)
   i = -1
-  a = [1, 3, 2, 7]
-  b = a.dup
+  a = list.dup
 
-  b.count.times do
-    a << b[i]
+  a.length.times do
+    list << a[i]
     i += -1
   end
-  return a
+  return list
 end
 
 
@@ -32,7 +31,7 @@ def switchPairs(list)
   num1 = 0
   num2 = 1
   a = ["four", "score", "and", "seven", "years", "ago"]
-  b = []
+  b = [] #Need to remove eventually
 
   (a.count/2).times do
     if a.length/2 == 0
@@ -43,7 +42,7 @@ def switchPairs(list)
       num1 += 2
       num2 += 2
     else
-     
+
     end
   end
   return b
