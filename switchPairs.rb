@@ -1,5 +1,5 @@
 # def switchPairs(a)
-  # can swap with parallel assignment
+  # can swap with parallel assignment - I have a hunch this might be a ruby specific method, since we talked about how Ruby arrays are special
   # a[0], a[1] = a[1], a[0]
   # a[2], a[3] = a[3], a[2]
   # a[4], a[5] = a[5], a[4]
@@ -29,11 +29,9 @@ def switchPairs(a)
   return a
 end
 
-a.length == 6
 a = ["four", "score", "and", "seven", "years", "ago"]
 switchPairs(a) = ["score", "four", "seven", "and", "ago", "years"]
 
-b.length == 7
 b = ["to", "be", "or", "not", "to", "be", "hamlet"]
 0, 1, 2, 3, 4, 5, 6
 switchPairs(b) = ["be", "to", "not", "or", "be", "to", "hamlet"]
