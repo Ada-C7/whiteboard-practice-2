@@ -1,0 +1,31 @@
+def mirror(list)
+
+    mirrored_list = []
+
+    2.times do
+      list.length.times do |i|
+
+      mirrored_list[i] << list[i]
+      mirrored_list[-i-1] << list[i]
+
+      i += 1
+
+       end
+      end
+
+      mirrored_list
+end
+
+def switchPairs(list)
+
+    iteration = list.length/2
+
+    iteration.times do |i|
+
+      list[i] << list[i+1]
+      i += 2
+
+      end
+
+    return list
+end
