@@ -28,6 +28,9 @@ end
 #
 # If there are an odd number of values in the list, the final element is not moved. For example, if the original list had been: ["to", "be", "or", "not", "to", "be", "hamlet"] It would again switch pairs of values, but the final value, "hamlet" would not be moved, yielding this list: ["be", "to", "not", "or", "be", "to", "hamlet"]
 
+
+# I am still working on this solution.
+
 def switchPairs(list)
   num1 = 0
   num2 = 1
