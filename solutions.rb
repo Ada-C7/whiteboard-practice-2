@@ -11,18 +11,22 @@
 # Notice that it has been doubled in size by having the original sequence appearing in reverse order at the end of the list. You may not make assumptions about how many elements are in the list.
 
 def mirror list
+  #needs to be in a new array
+  new_array = list
   count = list.length
   index = count-1
   count.times do
     mirror_var = list[index]
-    list << mirror_var
+    new_array << mirror_var
     index -= 1
   end
-  return list
+  return new_array
 end
 
 list =  [1, 5, 7, 3]
+list2 = [5, 6, 7 ,8]
 puts mirror(list)
+puts mirror(list2)
 
 # ## Problem #2
 # Write a method `switchPairs` that switches the order of values in an Array of strings in a pairwise fashion. Your method should switch the order of the first two values, then switch the order of the next two, switch the order of the next two, and so on. **This switch should happen _in place_, meaning no new array should be created.** For example, if the list initially stores these values: ["four", "score", "and", "seven", "years", "ago"] your method should switch the first pair, "four", "score", the second pair, "and", "seven", and the third pair, "years", "ago", to yield this list: ["score", "four", "seven", "and", "ago", "years"]
