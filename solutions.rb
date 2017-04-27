@@ -22,12 +22,13 @@
 
 # code
 def mirror(list)
+  list_copy = list.dup
   index_tracker = list.length - 1
   until index_tracker == 0
-    list << list[index_tracker]
+    list_copy << list[index_tracker]
     index_tracker -= 1
   end
-  return list
+  return list_copy
 end
 
 p mirror([1, 3, 2, 7])
