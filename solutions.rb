@@ -12,7 +12,11 @@
 
 def mirror list
   #needs to be in a new array
-  new_array = list
+  new_array = []
+  list.each do |item|
+    new_array << item
+  end
+
   count = list.length
   index = count-1
   count.times do
